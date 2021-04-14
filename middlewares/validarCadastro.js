@@ -5,9 +5,9 @@ module.exports = async (request, response, next) => {
     let usuarios = await Usuario.findAll({where: {email}});
 
     if(!nome){
-        response.status(400).json({erro: "Nome é obrigadorio"});
+        response.status(400).json({erro: "Nome é obrigatorio"});
     }if(!email){
-        response.status(400).json({erro: "Email é obrigadorio"});
+        response.status(400).json({erro: "Email é obrigatorio"});
     } 
     if(!senha || senha.length < 6 || senha.length > 12){
         response.status(400).json({erro: "Senha invalida"});
