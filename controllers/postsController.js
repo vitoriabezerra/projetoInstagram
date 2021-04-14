@@ -43,6 +43,18 @@ const postsController = {
         });
 
         return response.json(postDeletado);  
+    },
+
+    show: async(request, response) =>{
+        const { usuarios_id} = request.params; //filtrar a busca pelo id
+
+        let postUsuario = await Post.findAll({
+            where : {
+                usuarios_id 
+            }
+        });
+
+        return response.json(postUsuario);  
     }
 
 }
