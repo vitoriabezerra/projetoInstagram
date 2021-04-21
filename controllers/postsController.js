@@ -4,7 +4,7 @@ const postsController = {
     index: async (request, response) => {
         let posts =  await Post.findAll();
         
-        return response.json(posts);
+        return response.render('index', {listaPosts: posts});
     },
     create: async (request, response) => {
         let {texto, img, usuarios_id, n_likes} = request.body;
