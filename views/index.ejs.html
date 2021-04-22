@@ -13,7 +13,7 @@
     <header>
         <img src="img/logo.png" alt="Instagram" class="logo">
     </header>
-    <main class="listaPosts">
+    <main class="lista.posts">
         <%= JSON.stringify(listaPosts) %> 
 
         <% for (let post of listaPosts) {%> 
@@ -41,7 +41,7 @@
                 <ol>
                     <% for (let comentario of post.comentarios) {%> 
                         <li>
-                            <p><%= comentario.texto %> </p>
+                            <p><%= comentario.post %> </p>
                         </li>
                     <% } %> 
 

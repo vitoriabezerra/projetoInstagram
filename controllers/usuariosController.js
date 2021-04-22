@@ -6,6 +6,11 @@ const usuariosController = {
         
         return response.render('usuarios', { listaUsuarios: usuarios});
     },
+
+    registro:(request, response) =>{
+        return response.render('registro');
+    },
+
     create: async (request, response) => {
         let {nome, email, senha} = request.body;
 
