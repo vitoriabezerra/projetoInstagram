@@ -34,7 +34,15 @@ main.listaPosts {
     border: 1px solid #ccc;
     padding: 40px 20px;
     margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
+/* .banner{
+    justify-content: center;
+} */
 
 .login form input {
     width: 100%;
