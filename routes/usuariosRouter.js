@@ -4,8 +4,9 @@ const usuariosController = require('../controllers/usuariosController');
 const validarCadastro = require("../middlewares/validarCadastro");
 
 router.get('/', usuariosController.index);
+router.get('/login', usuariosController.login);
+router.post('/login', usuariosController.auth);
 router.get('/registro', usuariosController.registro);
-router.get('/login', usuariosController.login)
 router.post('/', validarCadastro, usuariosController.create);
 router.put('/:id', usuariosController.update);
 router.delete('/:id', usuariosController.delete);
